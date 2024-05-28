@@ -1,0 +1,24 @@
+
+.big
+{
+	font-size: 50px;
+}
+
+.bigger
+{
+	font-size: 100px;
+}
+
+.biggest
+{
+	font-size: 150px;
+}
+.back
+{
+	color: darkgrey;
+}
+
+.forward:visited
+{
+	color: linen;
+}
