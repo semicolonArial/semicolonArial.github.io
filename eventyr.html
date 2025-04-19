@@ -28,7 +28,7 @@
 			//rick.setAttribute('src', rick.getAttribute('src') + '?autoplay=1'); // autoplay video
 			rick.style.display = 'block'; // unhide video
 			rick.requestFullscreen(); // enter full screen mode
-			
+			startVideo();
 		}
 	</script>
 </head>
@@ -59,6 +59,13 @@
 		function onPlayerReady(event) {
 			event.target.playVideo();
 		}
+		  
+		function startVideo() {
+			if (player) {
+				player.playVideo();
+			}
+		}
 	</script>
+	<script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
