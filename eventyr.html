@@ -22,8 +22,11 @@
 			display: none;
         }
 	</style>
-	<script src="https://www.youtube.com/iframe_api"></script>
     <script>
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         function playRick() {
 			const rick = document.getElementById('rick'); // get element
 			//rick.setAttribute('src', rick.getAttribute('src') + '?autoplay=1'); // autoplay video
@@ -39,11 +42,7 @@
 		
 		var player;
 		function onYouTubeIframeAPIReady() {
-			player = new YT.Player('rick', {
-				events: {
-					'onReady': onPlayerReady
-				}
-			});
+			player = new YT.Player('rick');
 		}	
 
 		<!-- function onPlayerReady(event) { -->
@@ -54,6 +53,7 @@
 			if (player) {
 				player.playVideo();
 				player.unMute();
+				console.log("hi");
 			}
 		}
 	</script>
