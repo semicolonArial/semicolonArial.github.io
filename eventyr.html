@@ -25,9 +25,10 @@
     <script>
         function playRick() {
 			const rick = document.getElementById('rick'); // get element
+			rick.setAttribute('src', rick.getAttribute('src') + '?autoplay=1'); // autoplay video
 			rick.style.display = 'block'; // unhide video
 			rick.requestFullscreen(); // enter full screen mode
-			rick.setAttribute('src', rick.getAttribute('src') + '?autoplay=1' + '?mute=1'); // autoplay video
+			
 		}
 	</script>
 </head>
@@ -36,7 +37,7 @@
 	<h1>Congratulations!</h1>
 	<h2>You are number <span id = "counter"></span></h2>
 	<a onclick="playRick();">Ready for the next hint?</a>
-	<iframe id="rick" src="https://www.youtube.com/embed/xvFZjo5PgG0?si=FbsyYK-7RieOoDm5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe id="rick" src="https://www.youtube.com/watch?v=xvFZjo5PgG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<!-- Disabled for being weird and creepy: -->
 		<!-- <img src="https://count.getloli.com/@semicolonArial?name=semicolonArial&theme=sketch-1&padding=7&offset=0&align=top&scale=1&pixelated=0&darkmode=auto" alt=":name" /> -->
 	<script>
